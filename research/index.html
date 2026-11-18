@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Kishan Paschapur</title>
+  <meta name="description" content="Research by Kishan Paschapur: physics-informed augmentation for X-ray diffraction (IEEE ONCON 2026) and human–AI trust at MIT BWSI.">
+  <meta name="author" content="Kishan Paschapur">
+  <link rel="canonical" href="https://kishan-no1.github.io/research/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research · Kishan Paschapur">
+  <meta property="og:description" content="Research by Kishan Paschapur: physics-informed augmentation for X-ray diffraction (IEEE ONCON 2026) and human–AI trust at MIT BWSI.">
+  <meta property="og:url" content="https://kishan-no1.github.io/research/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="avatar" aria-hidden="true">KP</div>
+      <div>
+        <p class="site-name"><a href="/">Kishan Paschapur</a></p>
+        <p class="tagline">High school junior · ML research &amp; systems</p>
+        <ul class="social">
+          <li><a href="https://github.com/Kishan-No1" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/kishan-paschapur-aa259b3a6/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></li>
+          <li><a href="https://devpost.com/reachtokishan" aria-label="Devpost"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.5 2.5h11L23 12l-5.5 9.5h-11L1 12z"/><path d="M8.6 7.4h3a4.6 4.6 0 0 1 0 9.2h-3z"/></svg></a></li>
+        </ul>
+      </div>
+      <p class="email"><a href="mailto:reachtokishan@gmail.com">reachtokishan@gmail.com</a></p>
+    </header>
+
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/research/" aria-current="page">Research</a>
+      <a href="/projects/">Projects</a>
+      <a href="/hackathons/">Hackathons</a>
+    </nav>
+
+    <main>
+<h1 class="page-title">Research</h1>
+      <p class="page-intro">I care about whether a model works on the data it will actually meet, and about how people decide when to trust one.</p>
+
+      <section>
+        <div class="entry" id="pxrd">
+          <h3>A Controlled Analysis of Physics-Informed Augmentation for Powder X-Ray Diffraction Classification</h3>
+          <p class="meta">Kishan Paschapur, Pranav Kulkarni (Stanford) · IEEE ONCON 2026</p>
+          <p><span class="label">Question.</span> Classifiers trained on simulated X-ray diffraction patterns score well on simulated tests. Do they work on real measurements?</p>
+          <p><span class="label">What I did.</span> Before testing anything, I audited the standard setup and found two problems: a split bug that silently dropped the four most common crystal classes from training, and 285 near-duplicate structures shared between the train and test sets. With those documented, I trained the same model with and without physically realistic noise (peak broadening, background, peak shifts) and compared them on real patterns.</p>
+          <p class="callout">Top-5 accuracy on real patterns: 30% → 55%</p>
+          <p><span class="label">Next.</span> A pre-registered journal study on a much larger set of real measurements.</p>
+          <ul class="links">
+            <li><a href="https://github.com/Kishan-No1/pxrd-physics-augmentation">Code</a></li>
+            <li class="soon">Paper (IEEE Xplore, coming soon)</li>
+          </ul>
+        </div>
+
+        <div class="entry" id="trust">
+          <h3>Human–AI trust under information imbalance</h3>
+          <p class="meta">MIT Beaver Works Summer Institute · Research Co-Lead · co-first author · in preparation for CHI 2027 Posters</p>
+          <p><span class="label">Question.</span> Do people lean on an AI advisor more when they can see less than it can?</p>
+          <p><span class="label">My part.</span> I built the study platform: a fixed, scripted schedule where 1 in 4 AI labels is wrong, participant codes, per-round surveys, decision timing, logs that are never overwritten, and 11 automated tests. I also found and turned off IP-address logging that our privacy commitments ruled out.</p>
+          <ul class="links">
+            <li><a href="/writing/dead-or-alive/">Read the write-up</a></li>
+          </ul>
+        </div>
+
+        <div class="entry" id="gatech">
+          <h3>Statistical methods research</h3>
+          <p class="meta">Georgia Institute of Technology · Nov 2026 – present</p>
+          <p>Paper in progress.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © 2026 Kishan Paschapur · Fremont, CA · Updated Nov 2026
+    </footer>
+  </div>
+</body>
+</html>
