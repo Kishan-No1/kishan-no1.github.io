@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
-  <link rel="stylesheet" href="/assets/style.css?v=4">
+  <link rel="stylesheet" href="/assets/style.css?v=6">
 </head>
 <body>
   <div class="wrap">
@@ -47,34 +47,30 @@
       <section>
         <div class="entry" id="dead-or-alive">
           <h3>Dead or Alive</h3>
-          <p class="meta">MIT BWSI Serious Games &amp; AI · Jul – Aug 2026 · team of 5 · Project Lead</p>
-          <p>A rescue-triage game where a driver with a fogged view decides who to save, with help from an AI advisor that sees more than the player does.</p>
-          <p><span class="label">My part.</span> The fog and driver-vision system, the Unity visibility-render pipeline across three fog levels, the settings and mode picker, and core game logic. In the fall I turned it into a web study platform.</p>
-          <ul class="tags"><li>Python</li><li>Unity</li><li>FastAPI</li></ul>
+          <p class="meta">MIT BWSI Serious Games &amp; AI · Jul 2026 – present · team of 5 · Project Lead</p>
+          <p>A rescue-triage game where a driver with a fogged view decides who to save, helped by an AI advisor that can see more than the player can. It became the platform for our human–AI trust study.</p>
+          <p><span class="label">Under the hood.</span> I built the driver's view: three fog levels backed by Unity-rendered scenes with per-scene metadata, so every character has a matching image at each visibility level. I also wrote the core game loop (who appears next, collecting supplies, automatic healing) and the settings and mode picker. In the fall I turned it into a web study platform on FastAPI: a scripted schedule makes the AI wrong on exactly 1 in 4 labels so every participant sees the same accuracy, each decision is timed in the browser and written to logs that are never overwritten, and 11 automated tests cover a full round end to end.</p>
           <ul class="links"><li><a href="/writing/dead-or-alive/">Write-up</a></li></ul>
         </div>
         <div class="entry" id="plume-finder">
           <h3>Plume Finder</h3>
-          <p class="meta">The Vakathon · Jul 2026 · team of 3</p>
-          <p>Matches satellite-detected methane plumes in Texas, New Mexico and Oklahoma to the facility most likely responsible, then drafts a complaint to the right state regulator.</p>
-          <p><span class="label">My part.</span> The map UI and part of the backend.</p>
-          <ul class="tags"><li>Python</li><li>machine learning</li><li>geospatial data</li></ul>
+          <p class="meta">Jul 2026 · team of 3</p>
+          <p>Satellites can spot methane leaks, but turning a detection into action is slow. Plume Finder maps plumes detected over the Permian Basin, links each one to the facility most likely responsible, routes it to the right state regulator and rule, and drafts a complaint that neighbors can back up with their own reports.</p>
+          <p><span class="label">Under the hood.</span> I built the front end and the complaint pipeline. The map is React and TypeScript on MapLibre and deck.gl, with plumes sized by leak rate; clicking one opens a panel with the matched operator, a confidence score and the rule that applies. A FastAPI route drafts the complaint letter with an LLM and falls back to a deterministic template when the API is unreachable, so the app never dead-ends. I also built the Texas-vs-New-Mexico view that shows the gap in methane rules across the border, and the flow for residents to report and co-sign.</p>
           <ul class="links"><li><a href="https://github.com/Kishan-No1/Plume-Finder">GitHub</a></li><li><a href="https://devpost.com/software/plume-finder">Devpost</a></li></ul>
         </div>
         <div class="entry" id="bit-museum">
           <h3>Bit Museum</h3>
           <p class="meta">VikingHacks 2026 · Track winner · Mar 2026 · team of 3</p>
-          <p>An explorable 8-bit digital art museum: walk the halls like an RPG and find art from the community.</p>
-          <p><span class="label">My part.</span> The backend, and a retrieval-augmented (RAG) agent that searches the museum's art database.</p>
-          <ul class="tags"><li>FastAPI</li><li>Next.js</li><li>Phaser.js</li><li>RAG</li></ul>
+          <p>An 8-bit digital art museum. Each artist gets a gallery room you walk through like a retro RPG, and a guide character helps visitors find art by describing what they want to see.</p>
+          <p><span class="label">Under the hood.</span> I built the backend in FastAPI with SQLAlchemy. Uploaded art runs through a pixelization pipeline that produces three versions: a 512px display image, a 64×64 16-color pixel version and a 16×16 8-color sprite for the gallery walls. The guide is retrieval-augmented: a scored keyword search across artists, rooms and artworks feeds the best matches into a GPT-4o-mini prompt, with fallback replies if the model call fails.</p>
           <ul class="links"><li><a href="https://github.com/Kishan-No1/Digital-Art-Museum">GitHub</a></li><li><a href="https://devpost.com/software/bit-museum">Devpost</a></li></ul>
         </div>
         <div class="entry" id="notchagent">
           <h3>notchAgent</h3>
-          <p class="meta">BV Hacks · Nov 2026 · team of 4</p>
-          <p>A macOS app that lives in the MacBook notch: it shows what each coding agent is doing and lets you approve or deny its requests with one keystroke, with a plain-English risk read-out for every request.</p>
-          <p><span class="label">My part.</span> Session lifecycle: detecting agent processes that have exited and pruning them (with tests), opening the notch automatically when a session is waiting, hiding idle sessions, building without Xcode, and starting at login with a single running copy.</p>
-          <ul class="tags"><li>Swift</li><li>SwiftUI</li><li>macOS</li></ul>
+          <p class="meta">Nov 2026 · team of 4</p>
+          <p>A macOS app that lives in the MacBook notch. It shows what each coding agent is doing and turns their permission requests into one-keystroke approvals, with a plain-English risk read-out for every request.</p>
+          <p><span class="label">Under the hood.</span> Written in Swift and SwiftUI. I built the session lifecycle: the app notices when an agent's process has exited and prunes its session, with tests covering the pruning logic. I also made the notch open on its own when a session is waiting on you, hid idle sessions, made the app build without Xcode, and added a login item that starts a single copy at login.</p>
           <ul class="links"><li><a href="https://github.com/Kishan-No1/BV-Hacks">GitHub</a></li></ul>
         </div>
       </section>

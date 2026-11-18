@@ -349,8 +349,13 @@ h2 {
 .hack-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 32px;
   margin-top: 36px;
+  /* break out of the text column: use most of the window width */
+  width: min(1400px, calc(100vw - 64px));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .hack-card { text-align: center; }
 .hack-shot {
@@ -424,7 +429,7 @@ h2 {
     gap: 14px;
   }
   .thumb { width: 120px; }
-  .hack-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hack-grid { grid-template-columns: 1fr; gap: 40px; width: calc(100vw - 32px); }
   .record thead { display: none; }
   .record,
   .record tbody,
