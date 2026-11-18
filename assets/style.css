@@ -75,7 +75,6 @@ p { margin: 0 0 1em; }
   width: 150px;
   aspect-ratio: 420 / 492;
   border-radius: 16px;
-  border: 2px solid var(--heading);
   background: var(--callout);
   overflow: hidden;
 }
