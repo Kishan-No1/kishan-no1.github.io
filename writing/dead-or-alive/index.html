@@ -51,7 +51,7 @@
         <p>Do people lean on an AI advisor more when they can see less? To measure that, we needed a game where the AI's mistakes are controlled and every decision is logged, so that every participant faces the same AI.</p>
 
         <h2>My contribution</h2>
-        <p>In the summer I led our five-person team and built the fog and vision system, the settings and mode picker, and core game logic. This fall I took over a teammate's unmerged web branch and turned it into the study platform: locked settings, a scripted error schedule, participant codes, a rules quiz, per-round surveys, decision timing measured in the browser, and logs that are never overwritten.</p>
+        <p>In the summer I led our four-person team and built the fog and vision system, the settings and mode picker, and core game logic. This fall I took over a teammate's unmerged web branch and turned it into the study platform: locked settings, a scripted error schedule, participant codes, a rules quiz, per-round surveys, decision timing measured in the browser, and logs that are never overwritten.</p>
 
         <h2>Hardest technical decision</h2>
         <p>How to make an AI that is "about 75% accurate" honestly. Our detector was nearly perfect, and the original build injected random misreads below a confidence threshold, so each player saw a different error rate. I replaced that with a scripted schedule: exactly 1 in 4 characters gets a wrong label that implies a different action. Every participant sees the same accuracy, and the "about 75%" on screen is true. The tradeoff is that the errors are less natural, in exchange for results that can be compared across participants.</p>
