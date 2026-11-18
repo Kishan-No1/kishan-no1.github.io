@@ -270,6 +270,16 @@ h2 {
 
 /* ---------- lists ---------- */
 
+.bullets {
+  margin: 4px 0 12px;
+  padding-left: 22px;
+}
+.bullets li {
+  margin: 0 0 8px;
+  padding-left: 4px;
+}
+.bullets li::marker { color: var(--heading); }
+
 .plain {
   margin: 0;
   padding: 0;
