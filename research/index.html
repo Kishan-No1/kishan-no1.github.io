@@ -46,27 +46,33 @@
       <p class="page-intro">I care about whether a model works on the data it will actually meet, and about how people decide when to trust one.</p>
 
       <section>
-        <div class="entry" id="pxrd">
+        <div class="entry with-thumb" id="pxrd">
+          <a class="thumb" href="https://github.com/Kishan-No1/pxrd-physics-augmentation"><img src="/assets/img/pxrd-paper.jpg" width="240" height="310" alt="First page of the paper: A Controlled Analysis of Physics-Informed Augmentation for Powder X-Ray Diffraction Classification"></a>
+          <div>
           <h3>A Controlled Analysis of Physics-Informed Augmentation for Powder X-Ray Diffraction Classification</h3>
           <p class="meta">Kishan Paschapur, Pranav Kulkarni (Stanford) · IEEE ONCON 2026</p>
-          <p><span class="label">Question.</span> Classifiers trained on simulated X-ray diffraction patterns score well on simulated tests. Do they work on real measurements?</p>
-          <p><span class="label">What I did.</span> Before testing anything, I audited the standard setup and found two problems: a split bug that silently dropped the four most common crystal classes from training, and 285 near-duplicate structures shared between the train and test sets. With those documented, I trained the same model with and without physically realistic noise (peak broadening, background, peak shifts) and compared them on real patterns.</p>
+          <p><span class="label">The question.</span> Classifiers trained on simulated X-ray diffraction patterns score well on simulated tests. Do they work on real measurements?</p>
+          <p><span class="label">Approach.</span> Before testing anything, I audited the standard setup and found two problems: a split bug that silently dropped the four most common crystal classes from training, and 285 near-duplicate structures shared between the train and test sets. With those documented, I trained the same model with and without physically realistic noise (peak broadening, background, peak shifts) and compared them on real patterns.</p>
           <p class="callout">Top-5 accuracy on real patterns: 30% → 55%</p>
-          <p><span class="label">Next.</span> A pre-registered journal study on a much larger set of real measurements.</p>
+          <p><span class="label">What's next.</span> A pre-registered journal study on a much larger set of real measurements.</p>
           <ul class="links">
             <li><a href="https://github.com/Kishan-No1/pxrd-physics-augmentation">Code</a></li>
             <li class="soon">Paper (IEEE Xplore, coming soon)</li>
           </ul>
+          </div>
         </div>
 
-        <div class="entry" id="trust">
+        <div class="entry with-thumb" id="trust">
+          <a class="thumb" href="/writing/dead-or-alive/"><img src="/assets/img/trust-study.svg" width="240" height="310" alt="Study flow: fogged driver view, AI label that is wrong 1 in 4 times, player decision, survey and log"></a>
+          <div>
           <h3>Human–AI trust under information imbalance</h3>
-          <p class="meta">MIT Beaver Works Summer Institute · Research Co-Lead · co-first author · in preparation for CHI 2027 Posters</p>
-          <p><span class="label">Question.</span> Do people lean on an AI advisor more when they can see less than it can?</p>
-          <p><span class="label">My part.</span> I built the study platform: a fixed, scripted schedule where 1 in 4 AI labels is wrong, participant codes, per-round surveys, decision timing, logs that are never overwritten, and 11 automated tests. I also found and turned off IP-address logging that our privacy commitments ruled out.</p>
+          <p class="meta">MIT Beaver Works Summer Institute · Research Co-Lead · co-first author · built the study platform · in preparation for CHI 2027 Posters</p>
+          <p><span class="label">The question.</span> Do people lean on an AI advisor more when they can see less than it can?</p>
+          <p><span class="label">The platform.</span> A web version of the game built for the study. A fixed, scripted schedule makes the AI wrong on exactly 1 in 4 labels, so every participant sees the same accuracy. It assigns participant codes, runs per-round surveys, times each decision, keeps logs that are never overwritten, and is covered by 11 automated tests. IP-address logging is off, as the study's privacy commitments require.</p>
           <ul class="links">
             <li><a href="/writing/dead-or-alive/">Read the write-up</a></li>
           </ul>
+          </div>
         </div>
 
         <div class="entry" id="gatech">

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 310" role="img" aria-label="Human–AI trust study: fogged view, AI label, decision, survey and log">
+  <rect width="240" height="310" fill="#17130f"/>
+  <rect x="0.5" y="0.5" width="239" height="309" fill="none" stroke="#ff8c42" stroke-opacity="0.35"/>
+  <text x="20" y="38" font-family="Georgia, serif" font-size="17" font-weight="600" fill="#ff8c42">Human–AI</text>
+  <text x="20" y="60" font-family="Georgia, serif" font-size="17" font-weight="600" fill="#ff8c42">trust study</text>
+  <text x="20" y="80" font-family="Menlo, monospace" font-size="9.5" fill="#a79d91">MIT BWSI · CHI 2027 (in prep.)</text>
+  <g font-family="Menlo, monospace" font-size="10.5" fill="#ece6dd">
+    <rect x="20" y="104" width="200" height="30" rx="4" fill="none" stroke="#a79d91" stroke-opacity="0.6"/>
+    <text x="32" y="123">fogged driver view</text>
+    <rect x="20" y="150" width="200" height="30" rx="4" fill="none" stroke="#ff8c42"/>
+    <text x="32" y="169">AI label · 1 in 4 wrong</text>
+    <rect x="20" y="196" width="200" height="30" rx="4" fill="none" stroke="#a79d91" stroke-opacity="0.6"/>
+    <text x="32" y="215">player decision + time</text>
+    <rect x="20" y="242" width="200" height="30" rx="4" fill="none" stroke="#a79d91" stroke-opacity="0.6"/>
+    <text x="32" y="261">survey → append-only log</text>
+  </g>
+  <g stroke="#ff8c42" stroke-width="1.5">
+    <line x1="120" y1="134" x2="120" y2="150"/>
+    <line x1="120" y1="180" x2="120" y2="196"/>
+    <line x1="120" y1="226" x2="120" y2="242"/>
+  </g>
+</svg>

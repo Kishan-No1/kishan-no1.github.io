@@ -238,6 +238,30 @@ h2 {
   vertical-align: 2px;
 }
 
+/* ---------- entries with a thumbnail ---------- */
+
+.with-thumb {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+.thumb {
+  display: block;
+  margin-top: 4px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.15s ease;
+}
+.thumb:hover { border-color: var(--heading); }
+.thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ---------- lists ---------- */
 
 .plain {
@@ -249,14 +273,14 @@ h2 {
 
 .news li {
   display: grid;
-  grid-template-columns: 96px 1fr;
-  gap: 14px;
+  grid-template-columns: 132px 1fr;
+  gap: 16px;
 }
 .date {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
-  padding-top: 3px;
+  padding-top: 2px;
   white-space: nowrap;
 }
 
@@ -264,7 +288,7 @@ h2 {
 
 .tools li {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 136px 1fr;
   gap: 14px;
 }
 .tools .date { padding-top: 2px; }
@@ -347,6 +371,11 @@ h2 {
     grid-template-columns: 1fr;
     gap: 0;
   }
+  .with-thumb {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .thumb { width: 120px; }
   .record thead { display: none; }
   .record,
   .record tbody,
