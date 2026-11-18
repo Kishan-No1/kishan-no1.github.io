@@ -1,14 +1,14 @@
 /* Kishan Paschapur: shared styles */
 
 :root {
-  --bg: #0b0a09;
-  --text: #ece6dd;
-  --muted: #a79d91;
-  --rule: rgba(255, 140, 66, 0.22);
-  --heading: #ff8c42;
-  --accent: #ff9f5c;
-  --accent-soft: rgba(255, 140, 66, 0.12);
-  --callout: #17130f;
+  --bg: #0b0c0d;
+  --text: #d6d9dc;
+  --muted: #8f979e;
+  --rule: rgba(45, 212, 191, 0.22);
+  --heading: #2dd4bf;
+  --accent: #5eead4;
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --callout: #111a19;
 
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -33,7 +33,7 @@ body {
 }
 
 .wrap {
-  max-width: 680px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 72px 16px 48px;
 }
