@@ -72,9 +72,9 @@ p { margin: 0 0 1em; }
 
 .avatar {
   flex: none;
-  width: 184px;
-  aspect-ratio: 7 / 8;
-  border-radius: 18px;
+  width: 150px;
+  aspect-ratio: 420 / 492;
+  border-radius: 16px;
   border: 2px solid var(--heading);
   background: var(--callout);
   overflow: hidden;
@@ -420,7 +420,7 @@ h2 {
     justify-items: start;
     gap: 14px;
   }
-  .avatar { width: 150px; border-radius: 16px; }
+  .avatar { width: 128px; border-radius: 14px; }
   .site-name { font-size: 27px; }
   .site-nav { gap: 6px 20px; margin-top: 28px; }
   .news li,
